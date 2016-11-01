@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Gerard Gust - Coding Test</title>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment-with-locales.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body ng-app="app">
+    <div class="container">
+        <header>
+            <a class="head-backlink" href="#"></a>
+            <h1>Activity</h1>
+            <a class="main-nav-open" href="##"></a>
+        </header>
+        <div class="activity-container" ng-controller="activityListController as activityList">
+            <ul class="activity-list">
+                <li class="activity-item" ng-repeat="item in activityList.items">
+                    <div class="activity-avatar"><img src="{{item.avatar}}" /></div>
+                    <div class="activity-content">
+                        <div class="name">{{item.author}} <span>{{item.typeStr}}</span></div>
+                        <div class="title">{{item.title}}</div>
+                        <div class="time">{{item.postDate}}</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
